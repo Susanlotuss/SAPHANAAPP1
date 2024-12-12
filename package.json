@@ -18,14 +18,18 @@
     "@sap/cds-dk": "^8"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "watch-videogame_catalog": "cds watch --open videogame_catalog/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
-      "auth": "xsuaa"
+      "auth": "mocked"
     },
     "sql": {
       "native_hana_associations": false
     }
-  }
+  },
+  "sapux": [
+    "app/videogame_catalog"
+  ]
 }
