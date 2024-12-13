@@ -1,4 +1,20 @@
-ID,createdAt,createdBy,modifiedAt,modifiedBy,name,foundedAt,location
-f1a33462-56a7-4d3b-b7c7-d1ecf6adf76b,2024-01-01 10:00:00,Admin,2024-01-01 11:00:00,Admin,Team Cherry,2017-02-01,Australia
-2bc8533d-96e4-4ad7-99ff-998f8c3fe8b7,2024-01-02 10:00:00,Admin,2024-01-02 11:00:00,Admin,Nomada Studio,2018-01-01,Spain
-ad4210e4-019b-42c5-9ac7-c60ff01d8e99,2024-01-03 10:00:00,Admin,2024-01-03 11:00:00,Admin,ConcernedApe,2012-04-01,USA
+ID,name,foundedAt,location
+b9d35e1d-82a1-4cf4-9b0e-63e0e6be2c68,Team Cherry,2017-02-01,Australia
+5d10fd9b-9db2-402d-9b97-c6df2f4b6788,Nomada Studio,2018-01-01,Spain
+b09be717-561b-40ab-8f45-93df56659c4a,ConcernedApe,2012-04-01,USA
+ccf52893-9b8b-478f-975a-c1d09082e402,Santa Monica Studio,1999-01-01,USA
+2e31818b-9825-45f9-b4f4-320c77c40a4d,CD Projekt Red,2002-05-01,Poland
+d41e83c5-df53-4d26-bd1f-e717d201a0a6,Ubisoft Montreal,1997-01-01,Canada
+04be539d-45db-40da-899f-2f7b39d15a94,Rockstar North,1988-01-01,UK
+e19c2067-b29a-4089-bec1-79a7c7a3f3c1,Insomniac Games,1994-01-01,USA
+f2ad64c4-36c6-4e1f-8e5b-58f3a1a035b0,Valve,1996-08-01,USA
+3b218557-f17b-4a64-80e1-6a7ff2766bda,Bethesda Game Studios,1985-06-01,USA
+baee7a0f-870f-4b1d-8252-fce360d7f64c,Respawn Entertainment,2010-04-01,USA
+ae67468c-d2b6-4c5d-831b-99fc575b3a06,FromSoftware,1986-11-01,Japan
+9b4424fa-4e8b-464a-bb44-7e5fbc1989c7,Hellbent Games,2014-02-01,Australia
+25f3d5ba-5a6b-4cc6-bd6c-48b89b1e31e9,Housemarque,1995-02-01,Finland
+b98f4174-c3bc-440b-b322-411ebc795be3,Larian Studios,1996-10-01,Belgium
+a8e6e5e2-90ed-4fd5-8b2a-736cc8c4ea8f,Guerrilla Games,2000-01-01,Netherlands
+56ba5181-bc83-47a6-80fc-1714c67b6a01,Supergiant Games,2009-01-01,USA
+1c960fc6-7b76-42d4-a0cf-bf0f05397d77,Square Enix,1986-09-01,Japan
+c1e93c55-4e0e-420b-91db-b2f5cf7e3e5f,Obsidian Entertainment,2003-06-01,USA
