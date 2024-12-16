@@ -11,26 +11,26 @@ type StudioName : String(100);
 type PlatformName : String(50);
 
 entity Platforms : cuid {
-    name    : PlatformName;  // Ejemplo: PlayStation 5, Xbox Series X
-    games   : Association to many Games on games.platform = $self;  // Relación con Juegos
+    name    : PlatformName;
+    games   : Association to many Games on games.platform = $self;
 };
 
 entity Genres : cuid {
     name    : String(50);  // Ejemplo: Acción, Aventura, Estrategia
-    games   : Composition of many Games on games.genre = $self;  // Relación con Juegos
+    games   : Composition of many Games on games.genre = $self;
 };
 
 entity Developers : cuid {
     name       : StudioName;
     foundedAt  : Date;
     location   : String(100);
-    games      : Composition of many Games on games.developer = $self; // Relación con los juegos
+    games      : Composition of many Games on games.developer = $self;
 };
 
 entity Games : cuid {
     title       : GameTitle;
     releaseDate : Date;
-    genre       : Association to Genres;   // Relación con Género
-    platform    : Association to Platforms;  // Relación con Plataformas
+    genre       : Association to Genres;
+    platform    : Association to Platforms;
     developer   : Association to Developers;
 };
