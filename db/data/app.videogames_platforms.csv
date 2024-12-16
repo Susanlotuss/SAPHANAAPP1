@@ -1,20 +1,21 @@
-ID,name
-f23e54b7-ecfc-42b5-a2b4-59f7bb9519b6,PlayStation 5
-a89bb9db-f9cc-4a97-8f62-d4ea06f383f8,Xbox Series X
-d8b6a015-5c30-49e4-8b33-580b467ccf00,Nintendo Switch
-b98030c7-8d29-4536-8553-f62ab8b0e1b9,PC
-adaf2a98-35ea-48ff-a383-84d4c4b7c518,PlayStation 4
-c8e654f1-9f37-42ba-9df9-6dce66c79ef5,Xbox One
-8c65d0ba-45bb-43be-8b72-e3c5e72272a3,PC VR
-feb8a40a-2b7b-4a61-b2fa-5802c8f1185b,Stadia
-bb4b27b3-cbfe-45c3-88f7-d4c6a984c7d7,Mac OS
-2eac47d7-d4fa-4b7d-8133-b8fa456b185e,Android
-f8da3f55-bbba-43c9-b14b-ff9c4b46c8d3,iOS
-de6da428-e6e4-4570-aeb4-865c98a7318f,Nintendo 3DS
-80f0c0be-cd2f-4709-96a1-17b84b881d67,PlayStation Vita
-4b39f4ed-c89d-47b9-b3a6-0c170a41d3e2,Xbox 360
-cf560e3a-6e60-4c95-8830-4b66b65b6841,Nintendo Wii U
-2e2e6bc1-56bc-47a5-853b-90f8b72b58d2,GameCube
-c7b6f9ed-453b-4670-a923-fb64e0104f6a,Super Nintendo Entertainment System
-a17b75c9-df29-44d7-9e74-c2a06e8a29c1,PC Engine
-8d4c94d7-529d-4ad5-8642-b9b3ef9d60de,Neo Geo
+ID,Name
+1a2e3f45-bb64-46b2-a3c4-59f70f5e548b,PC-PS4-Xbox One-Switch-PS5-Xbox-Linux-macOS
+32b149a5-b40f-47f2-8462-e41868c5f5ac,PC-PS4-Xbox One-Switch-Linux-macOS-Stadia
+5972bb8d-6b92-4330-95f9-9e1d337b7b53,PC-PS4-Switch-iOS-macOS-Stadia
+33acb4a6-70b2-4127-a9a0-d3f74d4d705e,PS3-PS4-PC-iOS-Stadia
+50ecf225-33a7-4f02-92da-d221c7c6019b,PC-PS4-Xbox One-Switch-iOS-Android-macOS
+943ce15c-bf7a-4087-998b-f44b276cb5ca,PC-PS4-Xbox One-Switch-iOS-Android-Stadia-macOS
+77f5a1e5-6b42-46b5-9a1e-7f8dbb10e3d2,PC-PS4-Xbox One-Switch-Stadia-iOS-Linux-macOS
+15bb3a71-e5b3-4579-bb7b-c528bb7e54ca,PC-PS4-Xbox One-Switch-Vita-macOS-Linux-iOS
+3f5d31b8-b2c9-44e5-8b7c-9208e07f7b7a,PC-PS4-Xbox One-Switch-iOS-macOS-Stadia
+58ff1e7f-f72e-4e25-9cd9-6e7e3ad4da1a,PC-Xbox One-Switch-PS4-macOS-Stadia-PS5
+9f4d6a4b-6c64-4931-b544-6361d95fc6db,PC-Switch-macOS-Linux-PS4-PS5
+710e8458-ec9c-473f-bec7-56b38de6935b,PC-Xbox 360-PS4-PS Vita-Switch-macOS-Linux-iOS
+1f32b7d3-b48f-4b96-9b22-6fe1cbf10d9f,PC-PS4-Xbox One-Switch-macOS-Linux
+557d8b6e-1b2c-4b5e-beb5-cc3a1b1cc80d,PS5-Stadia-macOS-Linux
+a0729134-b1d6-40a2-a8bc-3a8b7f9f6898,PS5-Stadia-iOS-macOS-Linux
+e1a395da-bba7-485f-a2b4-1a676b763d29,PC-PS4-Xbox One-Switch-iOS-Android-Linux-Stadia
+62f22e1c-2b1e-4b0b-8850-90c6cb0421b1,PC-Switch-iOS-Linux-macOS
+38ab2fc5-e5cf-47e7-b046-e10690f2b138,Xbox Series X/S-PS5-Stadia-Switch
+548f44b1-02b3-4ef4-a18c-848b703cb7d0,PS Vita-PC-Linux-Stadia-PS4-Switch
+bba4732d-bad3-46bc-821a-c3e049b8d736,PS4-Switch-macOS-Linux

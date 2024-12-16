@@ -1,5 +1,6 @@
 using app.videogames from '../db/videogames';
 using { sap } from '@sap/cds-common-content';
+using V_VIDEOGAME from '../db/videogames';
 
 service VideogameCatalogService {
     @requires           : 'authenticated-user'
@@ -21,4 +22,7 @@ service VideogameCatalogService {
     @readonly
     @restrict: [{ grant: 'READ', where: 'name = ''Aventura-Horror'''}]
     entity Genres as projection on videogames.Genres;
+
+    @readonly
+    entity V_Videogame as projection on V_VIDEOGAME;
 }

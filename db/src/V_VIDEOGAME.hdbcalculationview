@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="V_VIDEOGAME" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" application="BAS">
+<descriptions defaultDescription="V_VIDEOGAME"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="APP_VIDEOGAMES_GAMES">
+    <resourceUri>APP_VIDEOGAMES_GAMES</resourceUri>
+  </DataSource>
+  <DataSource id="APP_VIDEOGAMES_PLATFORMS">
+    <resourceUri>APP_VIDEOGAMES_PLATFORMS</resourceUri>
+  </DataSource>
+  <DataSource id="APP_VIDEOGAMES_GENRES">
+    <resourceUri>APP_VIDEOGAMES_GENRES</resourceUri>
+  </DataSource>
+  <DataSource id="APP_VIDEOGAMES_DEVELOPERS">
+    <resourceUri>APP_VIDEOGAMES_DEVELOPERS</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1_1" cardinality="CN_N" joinType="inner" multiJoinNode="Join_1" multiJoinCentralTable="APP_VIDEOGAMES_GAMES" multiJoinOrder="Outside In">
+    <viewAttributes>
+      <viewAttribute id="TITLE"/>
+      <viewAttribute id="RELEASEDATE"/>
+      <viewAttribute id="NAME_APP_VIDEOGAMES_PLATFORMS"/>
+      <viewAttribute id="GENRE_ID"/>
+      <viewAttribute id="DEVELOPER_ID"/>
+      <viewAttribute hidden="true" id="JOIN$PLATFORM_ID$ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="APP_VIDEOGAMES_GAMES">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TITLE" source="TITLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RELEASEDATE" source="RELEASEDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENRE_ID" source="GENRE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEVELOPER_ID" source="DEVELOPER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$PLATFORM_ID$ID" source="PLATFORM_ID"/>
+    </input>
+    <input node="APP_VIDEOGAMES_PLATFORMS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_APP_VIDEOGAMES_PLATFORMS" source="NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$PLATFORM_ID$ID" source="ID"/>
+    </input>
+    <joinAttribute name="JOIN$PLATFORM_ID$ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1_2" cardinality="CN_1" joinType="inner" multiJoinNode="Join_1" multiJoinCentralTable="APP_VIDEOGAMES_GAMES" multiJoinOrder="Outside In">
+    <viewAttributes>
+      <viewAttribute id="TITLE"/>
+      <viewAttribute id="RELEASEDATE"/>
+      <viewAttribute id="NAME_APP_VIDEOGAMES_GENRES"/>
+      <viewAttribute id="NAME_APP_VIDEOGAMES_PLATFORMS"/>
+      <viewAttribute id="DEVELOPER_ID"/>
+      <viewAttribute hidden="true" id="JOIN$GENRE_ID$ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Join_1_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TITLE" source="TITLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RELEASEDATE" source="RELEASEDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_APP_VIDEOGAMES_PLATFORMS" source="NAME_APP_VIDEOGAMES_PLATFORMS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEVELOPER_ID" source="DEVELOPER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$GENRE_ID$ID" source="GENRE_ID"/>
+    </input>
+    <input node="APP_VIDEOGAMES_GENRES">
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_APP_VIDEOGAMES_GENRES" source="NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$GENRE_ID$ID" source="ID"/>
+    </input>
+    <joinAttribute name="JOIN$GENRE_ID$ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1_3" cardinality="CN_1" joinType="inner" multiJoinNode="Join_1" multiJoinCentralTable="APP_VIDEOGAMES_GAMES" multiJoinOrder="Outside In">
+    <viewAttributes>
+      <viewAttribute id="TITLE"/>
+      <viewAttribute id="RELEASEDATE"/>
+      <viewAttribute id="NAME_DEVELOPERS"/>
+      <viewAttribute id="FOUNDEDAT"/>
+      <viewAttribute id="LOCATION"/>
+      <viewAttribute id="NAME_APP_VIDEOGAMES_GENRES"/>
+      <viewAttribute id="NAME_APP_VIDEOGAMES_PLATFORMS"/>
+      <viewAttribute hidden="true" id="JOIN$DEVELOPER_ID$ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Join_1_2">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TITLE" source="TITLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RELEASEDATE" source="RELEASEDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_APP_VIDEOGAMES_GENRES" source="NAME_APP_VIDEOGAMES_GENRES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_APP_VIDEOGAMES_PLATFORMS" source="NAME_APP_VIDEOGAMES_PLATFORMS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$DEVELOPER_ID$ID" source="DEVELOPER_ID"/>
+    </input>
+    <input node="APP_VIDEOGAMES_DEVELOPERS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_DEVELOPERS" source="NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FOUNDEDAT" source="FOUNDEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOCATION" source="LOCATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$DEVELOPER_ID$ID" source="ID"/>
+    </input>
+    <joinAttribute name="JOIN$DEVELOPER_ID$ID"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Join_1_3">
+  <attributes>
+    <attribute id="TITLE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TITLE"/>
+      <keyMapping columnObjectName="Join_1_3" columnName="TITLE"/>
+    </attribute>
+    <attribute id="RELEASEDATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RELEASEDATE"/>
+      <keyMapping columnObjectName="Join_1_3" columnName="RELEASEDATE"/>
+    </attribute>
+    <attribute id="NAME_DEVELOPERS" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME"/>
+      <keyMapping columnObjectName="Join_1_3" columnName="NAME_DEVELOPERS"/>
+    </attribute>
+    <attribute id="FOUNDEDAT" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FOUNDEDAT"/>
+      <keyMapping columnObjectName="Join_1_3" columnName="FOUNDEDAT"/>
+    </attribute>
+    <attribute id="LOCATION" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOCATION"/>
+      <keyMapping columnObjectName="Join_1_3" columnName="LOCATION"/>
+    </attribute>
+    <attribute id="NAME_APP_VIDEOGAMES_GENRES" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME_APP_VIDEOGAMES_GENRES"/>
+      <keyMapping columnObjectName="Join_1_3" columnName="NAME_APP_VIDEOGAMES_GENRES"/>
+    </attribute>
+    <attribute id="NAME_APP_VIDEOGAMES_PLATFORMS" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME_APP_VIDEOGAMES_PLATFORMS"/>
+      <keyMapping columnObjectName="Join_1_3" columnName="NAME_APP_VIDEOGAMES_PLATFORMS"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="250"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="APP_VIDEOGAMES_GAMES" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput" multiJoinViewNodeName="Join_1">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="227"/>
+    </shape>
+    <shape modelObjectName="APP_VIDEOGAMES_DEVELOPERS" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput" multiJoinViewNodeName="Join_1">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="265"/>
+    </shape>
+    <shape modelObjectName="APP_VIDEOGAMES_GENRES" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput" multiJoinViewNodeName="Join_1">
+      <upperLeftCorner x="620" y="30"/>
+      <rectangleSize width="234"/>
+    </shape>
+    <shape modelObjectName="APP_VIDEOGAMES_PLATFORMS" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput" multiJoinViewNodeName="Join_1">
+      <upperLeftCorner x="920" y="30"/>
+      <rectangleSize width="257"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

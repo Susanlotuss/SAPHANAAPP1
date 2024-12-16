@@ -1,20 +1,21 @@
-ID,name,foundedAt,location
-b9d35e1d-82a1-4cf4-9b0e-63e0e6be2c68,Team Cherry,2017-02-01,Australia
-5d10fd9b-9db2-402d-9b97-c6df2f4b6788,Nomada Studio,2018-01-01,Spain
-b09be717-561b-40ab-8f45-93df56659c4a,ConcernedApe,2012-04-01,USA
-ccf52893-9b8b-478f-975a-c1d09082e402,Santa Monica Studio,1999-01-01,USA
-2e31818b-9825-45f9-b4f4-320c77c40a4d,CD Projekt Red,2002-05-01,Poland
-d41e83c5-df53-4d26-bd1f-e717d201a0a6,Ubisoft Montreal,1997-01-01,Canada
-04be539d-45db-40da-899f-2f7b39d15a94,Rockstar North,1988-01-01,UK
-e19c2067-b29a-4089-bec1-79a7c7a3f3c1,Insomniac Games,1994-01-01,USA
-f2ad64c4-36c6-4e1f-8e5b-58f3a1a035b0,Valve,1996-08-01,USA
-3b218557-f17b-4a64-80e1-6a7ff2766bda,Bethesda Game Studios,1985-06-01,USA
-baee7a0f-870f-4b1d-8252-fce360d7f64c,Respawn Entertainment,2010-04-01,USA
-ae67468c-d2b6-4c5d-831b-99fc575b3a06,FromSoftware,1986-11-01,Japan
-9b4424fa-4e8b-464a-bb44-7e5fbc1989c7,Hellbent Games,2014-02-01,Australia
-25f3d5ba-5a6b-4cc6-bd6c-48b89b1e31e9,Housemarque,1995-02-01,Finland
-b98f4174-c3bc-440b-b322-411ebc795be3,Larian Studios,1996-10-01,Belgium
-a8e6e5e2-90ed-4fd5-8b2a-736cc8c4ea8f,Guerrilla Games,2000-01-01,Netherlands
-56ba5181-bc83-47a6-80fc-1714c67b6a01,Supergiant Games,2009-01-01,USA
-1c960fc6-7b76-42d4-a0cf-bf0f05397d77,Square Enix,1986-09-01,Japan
-c1e93c55-4e0e-420b-91db-b2f5cf7e3e5f,Obsidian Entertainment,2003-06-01,USA
+ID,Name,foundedAt,location
+d3c079ee-5c12-4665-b16b-3b04d81d463d,Maddy Makes Games,2013/09/01,Canadá
+d8a87f9f-b7d9-479b-b3d7-9e930dce2546,Team Cherry,2012/05/01,Australia
+e1bcbb79-5971-4ef1-a5e7-3584e5a8595f,Nomada Studio,2016/03/01,España
+b183f1b0-8818-4b2e-8e3d-96181ab50888,Thatgamecompany,2006/07/01,EE.UU.
+ef4cc9f9-f93e-4375-99d8-450d2bc8cfa8,Night School Studio,2014/01/01,EE.UU.
+fb7d46fc-d5f2-45db-8217-3a4a1c41818e,ConcernedApe,2012/01/01,EE.UU.
+b76cc3d5-71ff-4c59-b55a-ff4a58727c75,Motion Twin,2008/05/01,Francia
+b536b5f9-d9f1-4baf-a6c0-6196c69b54d5,Tobyfox Games,2013/09/15,EE.UU.
+35c9f505-346a-4319-89a6-35ff61e547c2,Thekla- Inc,2009/11/01,EE.UU.
+b70de835-d006-426e-9060-835f13b6631b,Studio MDHR,2010/04/01,Canadá
+dd5b34da-cc42-41c9-bb6c-279a39fcf231,adamgryu,2017/05/01,Canadá
+cb0dcd7d-2292-4c97-bcd2-e5a1a48eced1,Polytron Corporation,2008/01/01,Canadá
+f7b2d441-1a85-4f91-b221-bf71d5d56a89,Campo Santo,2013/04/01,EE.UU.
+7d00a98b-b567-4557-97f1-dfd759f530b3,Heart Machine,2013/11/01,EE.UU.
+5d970122-b3fe-4376-a493-fdb09371d740,Mobius Digital,2015/03/01,EE.UU.
+86511f8e-c1c2-4880-95d2-df1f4779f017,MegaCrit,2015/06/01,EE.UU.
+30f2d63e-3935-42d5-b3b2-7ec6a7f59f71,Hempuli,2013/01/01,Finlandia
+d4508243-df5e-4bb3-97c6-07f911199d1f,Tarsier Studios,2004/01/01,Suecia
+1c8f7d2a-c70b-4f37-8c47-bebfe55e1f3a,Messhof,2011/01/01,EE.UU.
+557110ef-bc80-43a2-bda0-1e249b2550f4,Greg Lobanov,2015/01/01,EE.UU.
