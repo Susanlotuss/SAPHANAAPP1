@@ -23,6 +23,8 @@ service VideogameCatalogService {
     @restrict: [{ grant: 'READ', where: 'name = ''Aventura-Horror'''}]
     entity Genres as projection on videogames.Genres;
 
+    function sleep() returns Boolean;
+
     @readonly
     entity V_Videogame as projection on V_VIDEOGAME;
 }
