@@ -1,0 +1,32 @@
+### Get player
+GET http://localhost:4004/odata/v4/tournament-management/Players
+Accept: application/json
+
+### Get player by ID
+GET http://localhost:4004/odata/v4/tournament-management/Players(ID)
+Accept: application/json
+
+### Create player
+POST http://localhost:4004/odata/v4/tournament-management/Players
+Content-Type: application/json
+
+{
+  "name": "Marta Rossi",
+  "email": "marta.rossi@email.com",
+  "gamerTag": "Marta_R",
+  "tournament": { "ID": "f7bd01be-b937-4339-a9d4-c5666b923a5e" },
+  "team": { "ID": "622548e6-95ca-47ff-a0ae-8019cd92ebae" },
+  "businessPartnerID": "IT99887"
+}
+
+### Patch player by ID
+PATCH http://localhost:4004/odata/v4/tournament-management/Players(ID)
+Content-Type: application/json
+
+{
+  "name": "Marta Rossi Updated",
+  "email": "marta.rossi.updated@email.com"
+}
+
+### Delete player
+DELETE http://localhost:4004/odata/v4/tournament-management/Players(7121a274-8cf4-4150-a064-c746293cfe31)

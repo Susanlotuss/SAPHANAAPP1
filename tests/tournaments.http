@@ -1,0 +1,33 @@
+### Obtener todos los torneos
+GET http://localhost:4004/odata/v4/tournament-management/Tournaments
+Accept: application/json
+
+### Obtener torneo por ID
+GET http://localhost:4004/odata/v4/tournament-management/Tournaments(ID)
+Accept: application/json
+
+### Crear un nuevo torneo
+POST http://localhost:4004/odata/v4/tournament-management/Tournaments
+Content-Type: application/json
+
+{
+  "name": "Winter Showdown",
+  "startDate": "2024-12-20",
+  "endDate": "2024-12-22",
+  "location": "XYZ Gaming Hub",
+  "description": "An epic weekend of esports action",
+  "isActive": true,
+  "isCancelled": false
+}
+
+### Actualizar un torneo existente
+PATCH http://localhost:4004/odata/v4/tournament-management/Tournaments(ID)
+Content-Type: application/json
+
+{
+  "name": "Updated Winter Tournament",
+  "description": "New winter tournament with more participants"
+}
+
+### Eliminar un torneo
+DELETE http://localhost:4004/odata/v4/tournament-management/Tournaments(ID)

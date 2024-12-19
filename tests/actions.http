@@ -1,0 +1,86 @@
+### Action: Create a tournament
+POST http://localhost:4004/odata/v4/tournament-management/createTournament
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Spring Tournament2",
+  "startDate": "2024-03-01",
+  "endDate": "2024-03-31",
+  "location": "National Stadium2",
+  "description": "A tournament for local teams2"
+}
+
+### Action: Create player
+POST http://localhost:4004/odata/v4/tournament-management/createPlayer
+Content-Type: application/json
+
+{
+  "name": "Globant2",
+  "email": "globan2t@email.com",
+  "gamerTag": "Globant_Ops2",
+  "tournamentId": "a35c0dfe-288b-48d5-a885-369b78b0af3f",
+  "businessPartnerID": "1000030"
+}
+
+### Action: Register a player in a tournament
+POST http://localhost:4004/odata/v4/tournament-management/registerParticipant
+Content-Type: application/json
+Accept: application/json
+
+{
+  "tournamentId": "d4e44a56-1956-40b9-840c-8200a00452b0",
+  "playerId": "87482cfd-9fc2-4ebc-8866-a2d2416d5a6d"
+}
+
+### Action: List of players in a particular tournament
+POST http://localhost:4004/odata/v4/tournament-management/getEventParticipants?tournamentId=a35c0dfe-288b-48d5-a885-369b78b0af3f
+Accept: application/json
+Content-Type: application/json
+
+{
+  "tournamentId": "f7bd01be-b937-4339-a9d4-c5666b923a5e"
+}
+
+### Action: Cancel a tournament
+POST http://localhost:4004/odata/v4/tournament-management/cancelTournament
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "d4e44a56-1956-40b9-840c-8200a00452b0",
+  "cancellationReason": "External factors"
+}
+
+### Action: Reopen a tournament
+POST http://localhost:4004/odata/v4/tournament-management/reopenTournament
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "d4e44a56-1956-40b9-840c-8200a00452b0"
+}
+
+### Action: Read Events/Tournaments
+GET http://localhost:4004/odata/v4/tournament-management/Tournaments
+Content-Type: application/json
+Accept: application/json
+
+### Action: Read Events/Tournaments plus participants/players and teams
+GET http://localhost:4004/odata/v4/tournament-management/Tournaments?$expand=participants,teams
+Content-Type: application/json
+Accept: application/json
+
+### Action: Read Participants/Players
+GET http://localhost:4004/odata/v4/tournament-management/Players
+Content-Type: application/json
+Accept: application/json
+
+### Action: fetchParticipantDetails (External API)
+POST http://localhost:4004/odata/v4/tournament-management/fetchParticipantDetails
+Content-Type: application/json
+Accept: application/json
+
+{
+  "businessPartnerID": "1000030"
+}

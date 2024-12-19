@@ -11,6 +11,7 @@
     "@sap/cds-common-content": "^2.1.0",
     "@sap/hana-client": "^2.23.24",
     "@sap/xssec": "^4",
+    "axios": "^1.7.9",
     "express": "^4"
   },
   "devDependencies": {
@@ -20,7 +21,8 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-videogame_catalog": "cds watch --open videogame_catalog/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-videogame_catalog": "cds watch --open videogame_catalog/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-project1.2": "cds watch --open project1.2/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
@@ -31,6 +33,7 @@
     }
   },
   "sapux": [
-    "app/videogame_catalog"
+    "app/videogame_catalog",
+    "app/project1.2"
   ]
 }

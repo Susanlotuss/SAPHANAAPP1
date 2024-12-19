@@ -1,0 +1,36 @@
+### Get all teams
+GET http://localhost:4004/odata/v4/tournament-management/Teams
+Accept: application/json
+
+### Get team by ID
+GET http://localhost:4004/odata/v4/tournament-management/Teams(ID)
+Accept: application/json
+
+### Create a Team
+POST http://localhost:4004/odata/v4/tournament-management/Teams
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Team A",
+  "tournament": {
+  "ID": 1
+  }
+}
+
+### Update a Team
+PUT http://localhost:4004/odata/v4/tournament-management/Teams(ID)
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Team A"
+}
+
+### Delete a Team
+DELETE http://localhost:4004/odata/v4/tournament-management/Teams(ID)
+Accept: application/json
+
+### Get players from a team (get the players associated with a team)
+GET http://localhost:4004/odata/v4/tournament-management/Teams(ID)/players
+Accept: application/json

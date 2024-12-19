@@ -3,24 +3,24 @@ using { sap } from '@sap/cds-common-content';
 using V_VIDEOGAME from '../db/videogames';
 
 service VideogameCatalogService {
-    @requires           : 'authenticated-user'
+    // @requires           : 'authenticated-user'
     @cds.redirection.target
     @odata.draft.enabled: true
 
     entity Games as projection on videogames.Games;
     @cds.redirection.target: 'VideogameCatalogService.Games'
 
-    @requires: 'Admin'
+    // @requires: 'Admin'
     entity Developers as projection on videogames.Developers;
 
-    @requires: 'Admin'
+    // @requires: 'Admin'
     entity Platforms as projection on videogames.Platforms;
 
     @readonly
     entity Languages as projection on sap.common.Languages;
 
     @readonly
-    @restrict: [{ grant: 'READ', where: 'name = ''Aventura-Horror'''}]
+    // @restrict: [{ grant: 'READ', where: 'name = ''Aventura-Horror'''}]
     entity Genres as projection on videogames.Genres;
 
     function sleep() returns Boolean;
