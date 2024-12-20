@@ -1,0 +1,206 @@
+#### GET Requests
+
+### Get all Events
+GET http://localhost:4004/odata/v4/event-management/Events
+
+### Get All Participants
+GET http://localhost:4004/odata/v4/event-management/Participants
+
+### Get participants from an event
+POST http://localhost:4004/odata/v4/event-management/getEventParticipants
+Content-Type: application/json
+Accept: application/json
+
+{
+    "eventId": "EVENT_ID"
+}
+
+#For example:
+# {
+#     "eventId": "4169ea05-14d5-4573-80e2-2534defd24ae"
+# }
+
+### fetchParticipantDetails By businessPartnerID (EXTERNAL API)
+POST http://localhost:4004/odata/v4/event-management/fetchParticipantDetails
+Content-Type: application/json
+Accept: application/json
+
+{
+  "businessPartnerID": "EXTERNAL_API BusinessPartner_ID"
+}
+
+#For example:
+# {
+#   "businessPartnerID": "1000030"
+# }
+
+
+#### POST Requests for Events
+
+### Create an event*
+POST http://localhost:4004/odata/v4/event-management/createEvent
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "EVENT_NAME",
+    "startDate": "YYYY-MM-DD",
+    "endDate": "YYYY-MM-DD",
+    "location": "EVENT_LOCATION",
+    "description": "EVENT_DESCRIPTION"
+}
+
+# For example:
+# {
+#     "name": "Annual Tech Summit",
+#     "startDate": "2024-01-18",
+#     "endDate": "2024-01-20",
+#     "location": "Los Angeles",
+#     "description": "A summit for technology enthusiasts."
+# }
+
+### Cancel an event*
+POST http://localhost:4004/odata/v4/event-management/cancelEvent
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "EVENT_ID",
+  "cancellationReason": "CANCELLATION_REASON"
+}
+
+#For example:
+# {
+#   "id": "4169ea05-14d5-4573-80e2-2534defd24ae",
+#   "cancellationReason": "External factors"
+# }
+
+### Reopen an event*
+POST http://localhost:4004/odata/v4/event-management/reopenEvent
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "EVENT_ID"
+}
+
+#For example:
+# {
+#   "id": "4169ea05-14d5-4573-80e2-2534defd24ae"
+# }
+
+### Delete Event
+POST http://localhost:4004/odata/v4/event-management/deleteEvent
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "EVENT_ID"
+}
+
+#For example:
+# {
+#   "id": "e2eb8a63-65b4-46bf-886f-c273bde25337"
+# }
+
+### Update Event
+POST http://localhost:4004/odata/v4/event-management/updateEvent
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": "EVENT_ID",
+    "name": "EVENT_NAME",
+    "startDate": "YYYY-MM-DD",
+    "endDate": "YYYY-MM-DD",
+    "location": "EVENT_LOCATION",
+    "description": "EVENT_DESCRIPTION"
+}
+
+#For example:
+# {
+#     "id": "90cbc205-9518-4920-bad4-7e06a2d38f4e",
+#     "name": "Annual Tech Summit Updated",
+#     "startDate": "2024-01-18",
+#     "endDate": "2024-01-19",
+#     "location": "Los Angeles",
+#     "description": "A summit for technology enthusiasts."
+# }
+
+
+#### POST Requests for Participants
+
+### Create a Participant
+POST http://localhost:4004/odata/v4/event-management/createParticipant
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "PARTICIPANT_NAME",
+    "email": "PARTICIPANT_EMAIL",
+    "phone": "PARTICIPANT_PHONE",
+    "eventId": "OPTIONAL EVENT_ID",
+    "businessPartnerID": "EXTERNAL_API BP_ID"
+}
+
+#For example:
+# {
+#     "name": "Johana Doe test",
+#     "email": "johanadoetest@example.com",
+#     "phone": "3456789",
+#     "eventId": "",
+#     "businessPartnerID": "9980000084"
+# }
+#
+# Some businessPartnerID's examples for testing the external API: 9980000130, 55100081, 9980000120, 9980000102.
+
+### Register a Participant to an event
+POST http://localhost:4004/odata/v4/event-management/registerParticipant
+Content-Type: application/json
+Accept: application/json
+
+{
+    "eventId": "EVENT_ID",
+    "participantId": "PARTICIPANT_ID"
+}
+
+#For example:
+# {
+#     "eventId": "4169ea05-14d5-4573-80e2-2534defd24ae",
+#     "participantId": "227f2c0b-35ea-4a67-9781-4b9e5b3e4440"
+# }
+
+
+### Delete Participant
+POST http://localhost:4004/odata/v4/event-management/deleteParticipant
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "PARTICIPANT_ID"
+}
+
+#For example:
+# {
+#   "id": "227f2c0b-35ea-4a67-9781-4b9e5b3e4440"
+# }
+
+### Update a participant
+POST http://localhost:4004/odata/v4/event-management/updateParticipant
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "PARTICIPANT_ID",
+  "name": "PARTICIPANT_NAME",
+  "email": "PARTICIPANT_EMAIL",
+  "phone": "PARTICIPANT_PHONE"
+}
+
+#For example:
+# {
+#   "id": "a4a901fa-8608-4f92-ba24-208bff78daf6",
+#   "name": "Johana Doe",
+#   "email": "johanna.doe.updated@example.com",
+#   "phone": "43535353"
+# }
