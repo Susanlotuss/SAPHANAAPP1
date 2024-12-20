@@ -10,6 +10,7 @@ build-parameters:
       commands:
         - npm ci
         - npx cds build --production
+        - npx rimraf gen/db/src/gen/data
 modules:
   - name: HANAAPP1-srv
     type: nodejs
@@ -27,6 +28,7 @@ modules:
     requires:
       - name: HANAAPP1-auth
       - name: HANAAPP1-db
+      - name: HANAAPP1-dest
 
   - name: HANAAPP1-db-deployer
     type: hdb
@@ -35,21 +37,6 @@ modules:
       buildpack: nodejs_buildpack
     requires:
       - name: HANAAPP1-db
-
-  - name: HANAAPP1
-    type: approuter.nodejs
-    path: app/router
-    parameters:
-      keep-existing-routes: true
-      disk-quota: 256M
-      memory: 256M
-    requires:
-      - name: srv-api
-        group: destinations
-        properties:
-          name: srv-api # must be used in xs-app.json as well
-          url: ~{srv-url}
-          forwardAuthToken: true
 
 resources:
   - name: HANAAPP1-auth
@@ -66,3 +53,8 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: HANAAPP1-dest
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite

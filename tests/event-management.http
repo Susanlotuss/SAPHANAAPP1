@@ -17,7 +17,7 @@ Accept: application/json
 
 #For example:
 # {
-#     "eventId": "4169ea05-14d5-4573-80e2-2534defd24ae"
+#     "eventId": "90cbc205-9518-4920-bad4-7e06a2d38f4e"
 # }
 
 ### fetchParticipantDetails By businessPartnerID (EXTERNAL API)
@@ -26,7 +26,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "businessPartnerID": "EXTERNAL_API BusinessPartner_ID"
+  "businessPartnerID": "EXTERNAL_API_BUSINESS_PARTNER_ID"
 }
 
 #For example:
